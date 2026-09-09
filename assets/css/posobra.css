@@ -15,7 +15,7 @@
   z-index: -1;
 }
 .hero-posobra::before {
-  background: url("/assets/fundo.jpg") center 70% / cover no-repeat;
+  background: url("../fundo.jpg") center 70% / cover no-repeat;
 }
 .hero-posobra::after {
   background: linear-gradient(
