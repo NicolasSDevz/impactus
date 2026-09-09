@@ -1,0 +1,82 @@
+/* Página Limpeza Pós-Obra */
+
+.hero-posobra {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  padding-top: clamp(72px, 10vw, 120px);
+  padding-bottom: clamp(64px, 9vw, 110px);
+}
+.hero-posobra::before,
+.hero-posobra::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.hero-posobra::before {
+  background: url("/assets/fundo.jpg") center 70% / cover no-repeat;
+}
+.hero-posobra::after {
+  background: linear-gradient(
+    100deg,
+    rgba(20, 24, 31, 0.94) 0%,
+    rgba(20, 24, 31, 0.82) 38%,
+    rgba(20, 24, 31, 0.5) 70%,
+    rgba(20, 24, 31, 0.28) 100%
+  );
+}
+.hero-posobra .eyebrow { color: var(--gold-light); }
+.hero-posobra h1 { color: #fff; }
+.hero-posobra .section-lead { color: rgba(255, 255, 255, 0.82); }
+.hero-posobra .stat b { color: #fff; }
+.hero-posobra .stat span { color: rgba(255, 255, 255, 0.65); }
+
+.checklist-card {
+  background: rgba(20, 24, 31, 0.66);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+.checklist-card h4 { color: var(--gold-light); font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+.checklist-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.92rem;
+}
+.checklist-card li:last-child { border-bottom: none; }
+.checklist-card svg { color: var(--gold-light); margin-top: 2px; }
+
+.qualify-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.qualify-card {
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid var(--border);
+}
+.qualify-card.yes { background: rgba(169, 130, 79, 0.08); border-color: rgba(169, 130, 79, 0.25); }
+.qualify-card.no { background: var(--card); }
+.qualify-card h3 { font-size: 1rem; margin-bottom: 16px; }
+.qualify-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  color: var(--text);
+  font-size: 0.92rem;
+}
+.qualify-card.yes svg { color: var(--gold-dark); }
+.qualify-card.no svg { color: #b0483f; }
+
+@media (max-width: 720px) {
+  .qualify-grid { grid-template-columns: 1fr; }
+}
